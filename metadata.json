@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Aman Kumar - Medical Specialist",
+  "description": "Portfolio and clinical appointment booking web app for Dr. Aman Kumar, Internal Medicine Specialist (MBBS, FCPS).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
