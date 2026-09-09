@@ -1,0 +1,29 @@
+# Render Blueprint Specification (Infrastructure as Code)
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  # Primary Web Service - Static Single Page Application (SPA)
+  - type: web
+    name: dr-aman-kumar-medical
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      # SPA fallback routing to index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    envVars:
+      - key: NODE_VERSION
+        value: 20
