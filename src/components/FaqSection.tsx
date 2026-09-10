@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, MessageSquare, Send, X, Check } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageSquare, Send, X, Check, MessageCircle } from 'lucide-react';
 import { FAQS } from '../data/mockData';
+import { sendQuestionToWhatsApp } from '../utils/whatsapp';
 
 export const FaqSection: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(FAQS[0].id);
@@ -15,7 +16,13 @@ export const FaqSection: React.FC = () => {
 
   const handleAskSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!questionText) return;
+    if (!questionText || !questionEmail) return;
+
+    sendQuestionToWhatsApp({
+      email: questionEmail,
+      question: questionText,
+    });
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -105,7 +112,7 @@ export const FaqSection: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-bold text-slate-900">Question Sent!</h4>
                 <p className="text-xs text-slate-500">
-                  Dr. Thomas's team will reply to your inquiry shortly.
+                  Dr. Aman Kumar's clinical team will reply to your inquiry shortly.
                 </p>
               </div>
             ) : (
@@ -117,7 +124,7 @@ export const FaqSection: React.FC = () => {
                   </h3>
                 </div>
                 <p className="text-xs text-slate-500">
-                  Have a specific question about treatments or preparations? Send it directly to Dr. Thomas.
+                  Have a specific question about treatments or preparations? Send it directly to Dr. Aman Kumar.
                 </p>
 
                 <div>
@@ -158,10 +165,10 @@ export const FaqSection: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 text-xs font-bold uppercase tracking-wider bg-[#1E2E36] hover:bg-[#2F4752] text-white rounded-full flex items-center gap-1.5"
+                    className="px-5 py-2.5 text-xs font-bold uppercase tracking-wider bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center gap-1.5 shadow-sm transition-colors"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    <span>Submit</span>
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Send to WhatsApp</span>
                   </button>
                 </div>
               </form>

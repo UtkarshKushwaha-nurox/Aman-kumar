@@ -129,7 +129,7 @@ export const ReadArticles: React.FC = () => {
                 </p>
                 <p>{selectedArticle.content}</p>
                 <p>
-                  Proper clinical management requires customized biometric targets. If you or a loved one are experiencing these symptoms, schedule an in-depth clinical consultation with Dr. Thomas for comprehensive evaluations and tailored prescriptions.
+                  Root-cause Ayurvedic healing requires customized constitutional assessment. If you or a loved one are experiencing these symptoms, schedule an in-depth clinical consultation with Dr. Aman Kumar (Master in Ayurveda & Panchakarma Specialist) for accurate Nadi Pariksha and personalized herbal prescriptions.
                 </p>
               </div>
 

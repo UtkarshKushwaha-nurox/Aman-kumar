@@ -27,7 +27,7 @@ export const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
 
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href={`tel:${DOCTOR_INFO.phone}`}
+              href={`tel:${DOCTOR_INFO.phone.replace(/\s+/g, '')}`}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/90 hover:bg-white text-slate-800 text-xs font-bold tracking-wide border border-slate-300/80 shadow-2xs transition-colors"
             >
               <PhoneCall className="w-3.5 h-3.5 text-[#3D5B67]" />

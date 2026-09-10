@@ -135,7 +135,7 @@ export const CaseStudySection: React.FC = () => {
               <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                 <h4 className="font-bold text-slate-800">Intervention Protocol:</h4>
                 <p>
-                  Dr. Thomas designed a dual-phase treatment combining micro-titrated prescription therapy with dietary glycemic indexing and ambulatory telemetry. Continuous biometric tracking allowed real-time adjustments.
+                  Dr. Aman Kumar formulated an individualized Ayurvedic protocol integrating targeted classical herbal formulations, therapeutic Panchakarma procedures (such as localized Basti or Takradhara), and a strict Pathya (circadian diet) regimen to pacify aggravated Doshas and eliminate accumulated metabolic toxins (Ama).
                 </p>
                 <h4 className="font-bold text-slate-800 pt-2">Clinical Outcome:</h4>
                 <p>{activeCase.outcome}</p>

@@ -126,20 +126,20 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
 
               <div className="space-y-2 pt-2">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                  Clinical Protocols Include:
+                  Ayurvedic Protocols Include:
                 </h4>
                 <div className="space-y-1.5 text-xs text-slate-700">
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#3D5B67]" />
-                    <span>Specialized diagnostic biomarker review</span>
+                    <span>Nadi Pariksha & Prakriti (Dosha) assessment</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#3D5B67]" />
-                    <span>Targeted pharmacological optimization</span>
+                    <span>Customized classical herbal & Rasayana formulations</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#3D5B67]" />
-                    <span>Dietary & exercise prescription guidance</span>
+                    <span>Pathya-Apathya dietary & Dinacharya lifestyle guidance</span>
                   </div>
                 </div>
               </div>

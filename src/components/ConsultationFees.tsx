@@ -79,7 +79,7 @@ export const ConsultationFees: React.FC<ConsultationFeesProps> = ({ onSelectPlan
                   {/* Price */}
                   <div className="flex items-baseline gap-1 mb-6 pb-6 border-b border-current/10">
                     <span className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-                      ${plan.price}
+                      {plan.currencySymbol || '₹'}{plan.price}
                     </span>
                     <span
                       className={`text-xs font-medium ${

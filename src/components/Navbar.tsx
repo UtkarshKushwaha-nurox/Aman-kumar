@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         {/* Right CTA */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href={`tel:${DOCTOR_INFO.phone}`}
+            href={`tel:${DOCTOR_INFO.phone.replace(/\s+/g, '')}`}
             className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 px-3 py-2"
           >
             <Phone className="w-3.5 h-3.5 text-[#3D5B67]" />
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           ))}
           <div className="pt-3 border-t border-slate-200 flex flex-col gap-2.5">
             <a
-              href={`tel:${DOCTOR_INFO.phone}`}
+              href={`tel:${DOCTOR_INFO.phone.replace(/\s+/g, '')}`}
               className="flex items-center gap-2 text-sm text-slate-600 font-medium"
             >
               <Phone className="w-4 h-4 text-[#3D5B67]" />

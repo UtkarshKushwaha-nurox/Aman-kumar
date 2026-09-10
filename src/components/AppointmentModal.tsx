@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { X, Calendar, Clock, CheckCircle2, ArrowUpRight, Stethoscope } from 'lucide-react';
+import { X, Calendar, Clock, CheckCircle2, ArrowUpRight, Stethoscope, MessageCircle } from 'lucide-react';
 import { SERVICES, PRICING_PLANS } from '../data/mockData';
 import { PricingPlan } from '../types';
+import { sendConsultationToWhatsApp } from '../utils/whatsapp';
 
 interface AppointmentModalProps {
   isOpen: boolean;
@@ -27,7 +28,8 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
 
   useEffect(() => {
     if (preselectedPlan) {
-      setService(`${preselectedPlan.name} ($${preselectedPlan.price})`);
+      const sym = preselectedPlan.currencySymbol || '₹';
+      setService(`${preselectedPlan.name} (${sym}${preselectedPlan.price})`);
     } else if (preselectedService) {
       setService(preselectedService);
     } else {
@@ -40,6 +42,15 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
+
+    sendConsultationToWhatsApp({
+      name,
+      phone,
+      email,
+      date,
+      time,
+      type: service,
+    });
 
     const code = `AMAN-${Math.floor(100000 + Math.random() * 900000)}`;
     setBookingCode(code);
@@ -155,7 +166,7 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
                   <input
                     type="tel"
                     required
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 98765 00000"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-slate-300/70 focus:outline-hidden focus:ring-2 focus:ring-teal-300 focus:bg-white/15 text-xs sm:text-sm"
@@ -184,11 +195,14 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
                   onChange={(e) => setService(e.target.value)}
                   className="w-full bg-[#2E4650] border border-white/20 rounded-xl px-4 py-2.5 text-white focus:outline-hidden focus:ring-2 focus:ring-teal-300 text-xs sm:text-sm"
                 >
-                  {PRICING_PLANS.map((p) => (
-                    <option key={p.id} value={`${p.name} ($${p.price})`} className="bg-[#263a43]">
-                      {p.name} (${p.price} {p.period})
-                    </option>
-                  ))}
+                  {PRICING_PLANS.map((p) => {
+                    const sym = p.currencySymbol || '₹';
+                    return (
+                      <option key={p.id} value={`${p.name} (${sym}${p.price})`} className="bg-[#263a43]">
+                        {p.name} ({sym}${p.price} {p.period})
+                      </option>
+                    );
+                  })}
                   {SERVICES.map((s) => (
                     <option key={s.id} value={s.title} className="bg-[#263a43]">
                       {s.title}
@@ -228,9 +242,10 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full mt-3 py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-100 text-[#1E2E36] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md active:scale-98"
+                className="w-full mt-3 py-3.5 px-6 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md active:scale-98"
               >
-                <span>Confirm Appointment</span>
+                <MessageCircle className="w-4 h-4" />
+                <span>Send to WhatsApp & Confirm</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </form>

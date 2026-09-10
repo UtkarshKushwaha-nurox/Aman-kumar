@@ -28,13 +28,13 @@ export const MyServices: React.FC<MyServicesProps> = ({ onBookService }) => {
 
             <div className="space-y-4 relative z-10">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-200">
-                Clinical Care Solutions
+                Ayurvedic Clinical Solutions
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 My Services
               </h2>
               <p className="text-sm text-slate-200/90 leading-relaxed pt-2">
-                Comprehensive clinical solutions designed to support your lifelong health, from proactive early screenings to intensive chronic condition management.
+                Authentic Ayurvedic therapies designed to restore physical and mental equilibrium—from precise Nadi Pariksha to doctor-supervised Panchakarma and herbal management.
               </p>
             </div>
 

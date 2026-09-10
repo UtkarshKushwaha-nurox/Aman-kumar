@@ -41,7 +41,8 @@ export default function App() {
 
   const handleSelectPlan = (plan: PricingPlan) => {
     setSelectedPlan(plan);
-    setSelectedService(`${plan.name} ($${plan.price})`);
+    const sym = plan.currencySymbol || '₹';
+    setSelectedService(`${plan.name} (${sym}${plan.price})`);
     setModalOpen(true);
   };
 
@@ -51,7 +52,7 @@ export default function App() {
       <Navbar onOpenBooking={handleOpenBooking} />
 
       <main>
-        {/* 1. Hero Section: "Meet Dr. Thomas" */}
+        {/* 1. Hero Section: "Meet Dr. Aman Kumar" */}
         <Hero onOpenBooking={handleOpenBooking} />
 
         {/* 2. About Section: Bedside care photo & clinical bio */}
@@ -66,7 +67,7 @@ export default function App() {
         {/* 5. My Services: Slider info box & service cards */}
         <MyServices onBookService={handleBookService} />
 
-        {/* 6. Consultation Fees: 3 Pricing tiers ($30, $80, $100) */}
+        {/* 6. Consultation Fees: 3 Pricing tiers (₹500, ₹800, ₹1200) */}
         <ConsultationFees onSelectPlan={handleSelectPlan} />
 
         {/* 7. Contact Info / Booking: Consultation photo + booking form */}

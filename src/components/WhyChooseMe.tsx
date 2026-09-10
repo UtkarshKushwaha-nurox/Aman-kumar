@@ -31,7 +31,7 @@ export const WhyChooseMe: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm text-slate-500 max-w-md">
-            Delivering gold-standard internal medicine diagnostics paired with empathetic bedside care.
+            Delivering authentic Ayurvedic diagnostics, Nadi Pariksha, and personalized holistic healing.
           </p>
         </div>
 

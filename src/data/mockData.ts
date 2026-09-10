@@ -7,18 +7,19 @@ import {
   Testimonial,
   Article,
 } from '../types';
-import amanKumarHero from '../assets/images/dr_aman_kumar_1788942882978.jpg';
+import amanKumarHero from '../assets/images/amankumar.jpg';
 
 export const DOCTOR_INFO = {
   name: 'Dr. Aman Kumar',
-  degrees: 'MBBS, FCPS (Medicine)',
-  specialty: 'Internal Medicine Specialist',
-  experience: '10+ Years of Experience',
+  degrees: 'Master in Ayurveda',
+  specialty: 'Master in Ayurveda & Panchakarma Specialist',
+  experience: '10+ Years of Clinical Practice',
   patientsSatisfied: '10k+ Satisfied Patients',
-  phone: '+1 (555) 234-8910',
-  email: 'dr.amankumar@medicalcare.com',
-  address: 'St. Jude Specialist Health Center, Suite 402, New York, NY 10016',
-  workingHours: 'Mon - Sat: 9:00 AM - 6:00 PM',
+  phone: '+91 82094 73537',
+  whatsappPhone: '918209473537',
+  email: 'aman4651@gmail.com',
+  address: '351/1, Near Sai Mandir, 28 Civil Lines, Roorkee',
+  workingHours: 'Mon - Sat: 9:00 AM - 7:00 PM',
   heroImage: amanKumarHero,
   aboutImage:
     'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=85',
@@ -28,102 +29,102 @@ export const DOCTOR_INFO = {
 
 export const WHY_CHOOSE_ME = [
   {
-    id: 'patient-focused',
-    title: 'Patient-Focused Care',
+    id: 'root-cause-healing',
+    title: 'Root-Cause Healing',
     description:
-      'Every patient receives personalized clinical attention with treatment plans carefully tailored to their specific medical condition.',
+      'Identifying core Tridosha imbalances (Vata, Pitta, Kapha) and eliminating toxic buildup (Ama) rather than temporarily suppressing symptoms.',
     icon: 'HeartPulse',
   },
   {
-    id: 'clinical-excellence',
-    title: 'Clinical Excellence',
+    id: 'authentic-panchakarma',
+    title: 'Authentic Panchakarma',
     description:
-      'All diagnostic procedures and therapeutic interventions adhere to rigorous, evidence-based international clinical guidelines.',
+      'Supervised classical detoxification and restorative therapies adhering to certified Ayush pharmacological standards and traditional texts.',
     icon: 'ShieldCheck',
   },
   {
-    id: 'continuous-support',
-    title: 'Continuous Support',
+    id: 'personalized-prakriti',
+    title: 'Personalized Prakriti Care',
     description:
-      'Providing prompt follow-up monitoring, regular health evaluations, and continuous chronic condition advisory.',
+      'Every patient receives an individualized treatment roadmap with customized herbal formulations and targeted Pathya-Apathya diet charts.',
     icon: 'ClockAlert',
   },
   {
-    id: 'compassionate-care',
-    title: 'Compassionate Care',
+    id: 'integrative-compassion',
+    title: 'Integrative Compassion',
     description:
-      'Patients are treated with utmost dignity, empathy, and genuine dedication to long-term wellness and restorative recovery.',
+      'Combining time-tested Ayurvedic diagnosis (Nadi Pariksha) with modern laboratory correlations for safe, compassionate, whole-body wellness.',
     icon: 'HandHeart',
   },
 ];
 
 export const AREAS_OF_EXPERTISE: ExpertiseItem[] = [
   {
-    id: 'hypertension',
-    title: 'Hypertension Management',
+    id: 'nadi-pariksha',
+    title: 'Nadi Pariksha & Dosha Balancing',
     description:
-      'Comprehensive arterial blood pressure stabilization, cardiovascular risk reduction, and individualized medication protocols.',
+      'Traditional Ayurvedic pulse diagnosis revealing subtle physiological imbalances, digestive fire strength (Agni), and early disease roots.',
     image:
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80',
-    tag: 'Cardiovascular Health',
+    tag: 'Constitutional Medicine',
   },
   {
-    id: 'chronic-disease',
-    title: 'Chronic Disease Care',
+    id: 'panchakarma-detox',
+    title: 'Panchakarma & Detox Therapy',
     description:
-      'Specialized care pathways for diabetes type 2, dyslipidemia, metabolic syndrome, and multi-system chronic ailments.',
+      'Specialized 5-fold purification protocols including Shirodhara, Basti, Janu Basti, and Abhyanga for deep cellular rejuvenation.',
     image:
       'https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=900&q=80',
-    tag: 'Metabolic Disorders',
+    tag: 'Rejuvenation & Detox',
   },
   {
-    id: 'respiratory',
-    title: 'Respiratory Conditions',
+    id: 'joint-spine-care',
+    title: 'Joint, Spine & Metabolic Health',
     description:
-      'Diagnosis and therapeutic strategies for bronchial asthma, COPD, chronic bronchitis, and seasonal pulmonary conditions.',
+      'Holistic management for Osteoarthritis (Sandhivata), Cervical Spondylosis, Sciatica, Diabetes (Madhumeha), and chronic digestive disorders.',
     image:
       'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80',
-    tag: 'Pulmonology Care',
+    tag: 'Chronic Care & Mobility',
   },
 ];
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: 'general-checkup',
-    title: 'General Health Checkup',
-    shortDesc: 'Complete systemic evaluation and preventive diagnostic tests.',
+    id: 'nadi-pariksha-service',
+    title: 'Nadi Pariksha & Prakriti Consultation',
+    shortDesc: 'Comprehensive Ayurvedic pulse reading and constitutional body typing.',
     details:
-      'Routine health screening, vital signs assessment, blood lipid review, organ function tests, and preventative advice.',
+      'Thorough evaluation of Tridoshas (Vata, Pitta, Kapha), pulse rhythm analysis, tongue diagnosis, and personalized daily routine (Dinacharya) guidance.',
     image:
       'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
     duration: '20-30 Mins',
   },
   {
-    id: 'preventive-care',
-    title: 'Preventive Care Assessment',
-    shortDesc: 'Early detection strategies for genetic and lifestyle risk factors.',
+    id: 'panchakarma-service',
+    title: 'Panchakarma Detox & Rejuvenation',
+    shortDesc: 'Doctor-supervised classical cellular detoxification and mind-body therapies.',
     details:
-      'Full lifestyle risk assessment, pre-diabetic screening, vascular ultrasound referrals, and evidence-based preventive health regimens.',
+      'Personalized therapies including Shirodhara for stress, insomnia, and migraines; Janu Basti for knee pain; and therapeutic herbal oil Abhyanga.',
     image:
       'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=80',
+    duration: '45-60 Mins',
+  },
+  {
+    id: 'chronic-gut-joint-service',
+    title: 'Chronic Gut & Joint Health Care',
+    shortDesc: 'Non-invasive Ayurvedic protocols for arthritis, IBS, and metabolic disorders.',
+    details:
+      'Deepana-Pachana digestive fire restoration, natural anti-inflammatory herbal protocols for joint pain, and targeted metabolic balance therapies.',
+    image:
+      'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=900&q=80',
     duration: '30-45 Mins',
   },
   {
-    id: 'chronic-management',
-    title: 'Chronic Disease Protocol',
-    shortDesc: 'Long-term multidisciplinary care for ongoing health conditions.',
+    id: 'herbal-diet-service',
+    title: 'Ayurvedic Diet & Herbal Formulations',
+    shortDesc: 'Custom botanical medicines, classical Rasayanas, and Pathya diet charts.',
     details:
-      'Custom prescription adjustments, continuous glucose monitoring guidance, dietetic coordination, and regular organ health monitoring.',
-    image:
-      'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=900&q=80',
-    duration: '45 Mins',
-  },
-  {
-    id: 'lab-interpretation',
-    title: 'Diagnostic Lab Interpretation',
-    shortDesc: 'In-depth clinical analysis of bloodwork, imaging, and biomarkers.',
-    details:
-      'Clear, understandable breakdown of your clinical reports with actionable therapeutic insights and medication re-evaluations.',
+      'Prescriptions of authentic classical churnas, kwaths, and rasayanas paired with comprehensive Ayurvedic dietary guidelines based on your bio-energy type.',
     image:
       'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80',
     duration: '25 Mins',
@@ -134,49 +135,52 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'basic-consultation',
     name: 'Basic Consultation',
-    price: 30,
+    price: 500,
+    currencySymbol: '₹',
     period: '/ session',
-    description: 'Ideal for initial health inquiries and minor acute symptoms.',
+    description: 'Ideal for initial health checkups, minor ailments, and Prakriti inquiries.',
     duration: '15 min session',
     features: [
-      'General health assessment',
-      'Blood pressure & pulse check',
-      'Basic medical prescription',
-      'Symptom evaluation',
-      'Digital prescription copy',
+      'Basic Nadi Pariksha (Pulse examination)',
+      'Primary Dosha imbalance assessment',
+      'Classical herbal medicine prescription',
+      'Essential dietary & lifestyle advisory',
+      'Digital prescription copy via WhatsApp/Email',
     ],
   },
   {
     id: 'comprehensive-care',
     name: 'Comprehensive Care',
-    price: 80,
+    price: 800,
+    currencySymbol: '₹',
     period: '/ session',
     featured: true,
-    description: 'Our standard in-depth consultation for complex or chronic health evaluation.',
+    description: 'Our standard in-depth consultation for chronic health & multi-dosha imbalances.',
     duration: '30 min session',
     features: [
-      'Detailed diagnostic workup',
-      'In-depth clinical history review',
-      'Complete vitals & heart check',
-      'Lab report analysis & review',
-      'Customized medical regimen',
-      '7-day digital follow-up access',
+      'Complete Tridosha & Agni (digestive) assessment',
+      'Detailed clinical history & symptom evaluation',
+      'Pulse & tongue diagnostic analysis',
+      'Review of modern laboratory & imaging reports',
+      'Customized Pathya-Apathya dietary chart',
+      '7-day digital consultation follow-up access',
     ],
   },
   {
     id: 'specialized-care',
     name: 'Specialized Care',
-    price: 100,
+    price: 1200,
+    currencySymbol: '₹',
     period: '/ session',
-    description: 'Comprehensive chronic disease management and complex multi-system care.',
+    description: 'Specialized Panchakarma planning and multi-system chronic disease protocol.',
     duration: '45 min session',
     features: [
-      'Chronic disease recovery plan',
-      'Full metabolic & lab panel review',
-      'Tailored nutrition & lifestyle plan',
-      'Priority emergency call access',
-      'Family health history assessment',
-      '14-day dedicated follow-up window',
+      'Full Panchakarma detox & therapy roadmap',
+      'Multi-system chronic condition recovery plan',
+      'Tailored Rasayana (rejuvenation) protocol',
+      'Joint mobility or metabolic restoration program',
+      'Dinacharya (circadian routine) guidelines',
+      '14-day dedicated clinical support window',
     ],
   },
 ];
@@ -184,34 +188,34 @@ export const PRICING_PLANS: PricingPlan[] = [
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'case-1',
-    title: 'Hypertension & Cardiovascular Stabilization',
-    patientProfile: 'Male, 48 Years Old - Executive',
-    condition: 'Stage 2 Hypertension with persistent morning headaches',
-    timeline: '8 Weeks Intervention',
+    title: 'Severe Acid Peptic Disorder (Amlapitta) & Gut Healing',
+    patientProfile: 'Male, 42 Years Old - Software Architect',
+    condition: '3-year history of severe acid reflux, IBS, and chronic gastric bloating',
+    timeline: '8 Weeks Ayurvedic Care',
     outcome:
-      'Normalized arterial pressure from 168/104 mmHg down to 119/78 mmHg through precise medication titration and targeted sodium reduction.',
+      'Complete elimination of acid reflux and digestive distress through Deepana-Pachana herbal formulations, Takradhara, and circadian diet restructuring. Patient safely stopped daily antacids.',
     image:
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80',
     metrics: {
-      label: 'Blood Pressure Reduction',
-      before: '168/104 mmHg',
-      after: '119/78 mmHg',
+      label: 'Reflux & Pain Severity Score',
+      before: '9/10 (Severe Daily)',
+      after: '0/10 (Symptom Free)',
     },
   },
   {
     id: 'case-2',
-    title: 'Type 2 Diabetes Reversal & Glycemic Balance',
-    patientProfile: 'Female, 52 Years Old - School Administrator',
-    condition: 'Uncontrolled Type 2 Diabetes with high HbA1c',
-    timeline: '12 Weeks Care Plan',
+    title: 'Bilateral Knee Osteoarthritis (Sandhivata) Mobility Restoration',
+    patientProfile: 'Female, 58 Years Old - Retired Educator',
+    condition: 'Grade 3 knee osteoarthritis with morning stiffness and limited walking range',
+    timeline: '10 Weeks Care Plan',
     outcome:
-      'Achieved HbA1c drop from 9.4% to 6.2% while eliminating reliance on high-dose sulfonylureas through clinical nutrition and micro-dosed metformin.',
+      'Joint stiffness and pain reduced by over 75% following localized Janu Basti, authentic Sallaki-Guggulu protocols, and herbal medicated oil treatments, restoring independent stair climbing without knee surgery.',
     image:
       'https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=900&q=80',
     metrics: {
-      label: 'HbA1c Glycated Hemoglobin',
-      before: '9.4% (Severe)',
-      after: '6.2% (Controlled)',
+      label: 'Pain-Free Walking Distance',
+      before: '150 meters',
+      after: '1,800 meters',
     },
   },
 ];
@@ -219,39 +223,39 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const FAQS: FaqItem[] = [
   {
     id: 'faq-1',
-    question: 'How do I book an appointment with Dr. Aman Kumar?',
+    question: 'How do I book an appointment with Dr. Aman Kumar (Master in Ayurveda & Panchakarma Specialist)?',
     answer:
-      'You can schedule directly via the "Book Appointment" button or using our online booking form on this page. Alternatively, call our clinic reception at +1 (555) 234-8910 during working hours.',
+      'You can schedule directly using the "Book Appointment" button or using our booking form on this page. For immediate assistance or Panchakarma inquiries, call our clinic reception at +91 82094 73537.',
   },
   {
     id: 'faq-2',
-    question: 'Do I need a prior referral from another physician?',
+    question: 'What is Nadi Pariksha (Pulse Diagnosis) and how should I prepare?',
     answer:
-      'No prior physician referral is strictly required for routine internal medicine consultations. If you possess prior hospital discharge summaries or diagnostic reports, please bring them along.',
+      'Nadi Pariksha is the classical Ayurvedic art of reading radial artery vibrations to identify deeper Tridosha imbalances, toxin accumulation (Ama), and organ vitality. For the most accurate pulse reading, it is best done in the morning or at least 2.5 to 3 hours after a meal.',
   },
   {
     id: 'faq-3',
-    question: 'What documents and records should I bring?',
+    question: 'Can I take Ayurvedic medicines alongside my ongoing allopathic prescriptions?',
     answer:
-      'Please bring a government-issued photo ID, your active medication list (with dosages), recent laboratory blood test results, and your health insurance membership card.',
+      'Yes. Dr. Aman Kumar reviews all current prescription drugs, blood sugar records, and blood pressure medications to ensure safe integration without adverse herb-drug interactions, with an eye toward gradual holistic tapering where appropriate.',
   },
   {
     id: 'faq-4',
-    question: 'Do you accept health insurance plans?',
+    question: 'What is Panchakarma and who can benefit from it?',
     answer:
-      'Yes, we accept major insurance providers including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and Medicare. Contact our billing desk to confirm exact co-pays.',
+      'Panchakarma is the authentic five-fold bio-purification therapy of Ayurveda designed to detoxify tissues at a cellular level. It is especially beneficial for chronic arthritis, skin disorders, digestive issues, stress-induced migraines, and metabolic sluggishness.',
   },
   {
     id: 'faq-5',
-    question: 'Are telemedicine or video consultations available?',
+    question: 'Are telemedicine or online video consultations available?',
     answer:
-      'Yes, secure HIPAA-compliant video consultations are available for routine follow-ups, medication reviews, and lab report assessments.',
+      'Yes. High-definition video consultations are available for patients across India and internationally. Following the online session, your personalized Ayurvedic prescription and diet chart are shared electronically, and authentic medicines can be couriered to your doorstep.',
   },
   {
     id: 'faq-6',
-    question: 'What is the policy for prescription refills?',
+    question: 'What dietary rules (Pathya-Apathya) must I follow during treatment?',
     answer:
-      'Refills can be requested through our clinic patient portal or phone line. Please allow 24 to 48 hours for clinical review and transmission to your preferred pharmacy.',
+      'Ayurveda considers food as medicine. During your consultation, Dr. Aman Kumar provides a personalized Pathya (foods to favor) and Apathya (foods to avoid) chart tailored specifically to your prevailing Dosha imbalance and digestive capacity (Agni).',
   },
 ];
 
@@ -259,31 +263,31 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'review-1',
     quote:
-      'Dr. Aman Kumar is an extraordinary physician. He listened intently to my complex symptoms and diagnosed my hypertension when others rushed through examinations. My numbers are completely stable now!',
-    author: 'Michael R.',
+      'Dr. Aman Kumar is a truly gifted Ayurvedic physician. His Nadi Pariksha was so accurate—he pinpointed my chronic acidity and digestive fire weakness before I even mentioned my symptoms. Within 3 weeks on his herbal regimen, my gut feels completely restored!',
+    author: 'Rajesh Sharma',
     role: 'Verified Patient',
     rating: 5.0,
-    conditionTreated: 'Hypertension Management',
+    conditionTreated: 'Amlapitta & Digestive Restoration',
     date: '2 weeks ago',
   },
   {
     id: 'review-2',
     quote:
-      'The compassion, punctuality, and deep clinical acumen of Dr. Aman Kumar are unmatched. He explained every aspect of my diabetic treatment clearly without intimidating jargon.',
-    author: 'Sarah Jenkins',
+      'I was recommended knee surgery for my severe osteoarthritis. Dr. Aman Kumar designed a Panchakarma course with Janu Basti and classical herbal oils. Today, I can walk 2 kilometers daily pain-free. A life-changing experience!',
+    author: 'Sunita Mehra',
     role: 'Verified Patient',
     rating: 5.0,
-    conditionTreated: 'Type 2 Diabetes Protocol',
+    conditionTreated: 'Sandhivata (Knee Osteoarthritis)',
     date: '1 month ago',
   },
   {
     id: 'review-3',
     quote:
-      'Having suffered from persistent respiratory issues for months, Dr. Aman Kumar accurately pinpointed my chronic cough etiology. Within two weeks on his regimen, I was breathing normally again.',
-    author: 'David Rodriguez',
+      'The compassion, depth of Ayurvedic knowledge, and holistic approach of Dr. Aman Kumar are exceptional. He explained my Tridosha constitution clearly and gave practical daily routine and diet tips that corrected my chronic fatigue.',
+    author: 'Vikramaditya Verma',
     role: 'Verified Patient',
     rating: 5.0,
-    conditionTreated: 'Asthma & Bronchial Care',
+    conditionTreated: 'Vata-Pitta Imbalance & Vitality',
     date: '3 weeks ago',
   },
 ];
@@ -291,41 +295,41 @@ export const TESTIMONIALS: Testimonial[] = [
 export const ARTICLES: Article[] = [
   {
     id: 'article-1',
-    title: 'The Silent Threat: Recognizing Early Signs of Hypertension',
+    title: 'The Science of Nadi Pariksha: Uncovering Root Causes Through Pulse',
     summary:
-      'Why arterial hypertension often flies under the radar and the non-negotiable daily screening practices that protect vascular longevity.',
+      'How the ancient art of radial pulse diagnosis reveals subtle Tridosha imbalances, toxic accumulation (Ama), and sub-clinical disease states.',
     content:
-      'High blood pressure is often described as the "silent killer" because it frequently produces no noticeable symptoms until significant cardiovascular damage has already occurred. Regular ambulatory monitoring, dietary sodium awareness, and baseline arterial elasticity checks are critical cornerstones for long-term health...',
+      'In Ayurveda, Nadi Pariksha (Pulse Diagnosis) is not merely counting heart rate—it is a sophisticated diagnostic science. By placing three fingers on the radial artery, an experienced Master in Ayurveda & Panchakarma Specialist detects the nuanced movement of Vata (swan-like), Pitta (frog-like), and Kapha (pigeon-like). This enables detection of metabolic disharmony before chronic structural symptoms manifest...',
     readTime: '5 min read',
     date: 'Oct 14, 2025',
     image:
       'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
-    category: 'Cardiovascular Care',
+    category: 'Ayurvedic Diagnosis',
   },
   {
     id: 'article-2',
-    title: 'Metabolic Syndrome: Bridging Lifestyle and Medical Intervention',
+    title: 'Restoring the Digestive Fire (Agni): The Ayurvedic Secret to Immunity',
     summary:
-      'Understanding insulin resistance, lipid profiles, and practical evidence-backed protocols to halt diabetic progression.',
+      'Understanding why 90% of chronic illnesses stem from weak digestion (Mandagni) and how to kindle your digestive fire naturally.',
     content:
-      'Metabolic syndrome encompasses a cluster of conditions occurring together: increased blood pressure, high blood sugar, excess visceral body fat, and abnormal cholesterol levels. Early targeted intervention can successfully arrest progression to irreversible diabetes and coronary artery disease...',
+      'Ayurveda asserts that "Roga Sarvepi Mande Agnou"—all diseases originate from impaired Agni (metabolic and digestive fire). When Agni is compromised, undigested food ferments into Ama, a sticky toxic substance that clogs bodily channels (Srotas). Discover classical Deepana herbs, digestive spices, and eating rhythms to restore gut equilibrium...',
     readTime: '6 min read',
     date: 'Nov 02, 2025',
     image:
       'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
-    category: 'Preventive Health',
+    category: 'Gut & Digestive Health',
   },
   {
     id: 'article-3',
-    title: 'Respiratory Wellness: Navigating Seasonal Flare-ups & Asthma',
+    title: 'Panchakarma: Deep Cellular Cleansing and Seasonal Rejuvenation',
     summary:
-      'Essential strategies for maintaining peak lung capacity and safeguarding airway reactivity during seasonal weather shifts.',
+      'The clinical mechanics of authentic 5-fold Ayurvedic detoxification and why seasonal therapy prevents chronic lifestyle illnesses.',
     content:
-      'Seasonal environmental triggers present challenges to patients with hyperreactive airways and asthma. Maintaining an updated asthma action plan, monitoring peak flow variability, and understanding environmental trigger remediation ensures uninterrupted respiratory comfort year-round...',
+      'Unlike quick-fix wellness cleanses, Panchakarma is a medically supervised systemic detoxification therapy. Through Snehana (oleation), Swedana (sudation), and targeted elimination therapies like Basti and Shirodhara, metabolic residues are loosened from deep tissues and gently evacuated, restoring biological balance and long-term vitality...',
     readTime: '4 min read',
     date: 'Dec 18, 2025',
     image:
       'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
-    category: 'Pulmonology',
+    category: 'Panchakarma Therapy',
   },
 ];

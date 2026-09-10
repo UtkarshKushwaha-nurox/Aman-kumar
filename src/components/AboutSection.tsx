@@ -48,15 +48,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#19272E] tracking-tight leading-snug">
-              Dr. Aman Kumar is an Internal Medicine specialist skilled in diagnosing, treating, and preventing chronic diseases.
+              Dr. Aman Kumar is a Master in Ayurveda & Panchakarma Specialist skilled in Nadi Pariksha, constitutional balancing, and chronic disease reversal.
             </h2>
 
             <div className="space-y-4 text-slate-600 text-base leading-relaxed">
               <p>
-                Holding prestigious <strong className="text-slate-800">MBBS</strong> and <strong className="text-slate-800">FCPS (Medicine)</strong> qualifications, Dr. Aman Kumar combines over a decade of clinical rigor with deep patient-centered warmth. He emphasizes holistic disease root-cause discovery over mere symptom suppression.
+                Holding advanced clinical qualifications as a <strong className="text-slate-800">Master in Ayurveda & Panchakarma Specialist</strong>, Dr. Aman Kumar combines over a decade of clinical rigor with deep patient-centered warmth. He emphasizes holistic disease root-cause discovery over mere symptom suppression.
               </p>
               <p>
-                Trusted medical care focused on clinical accuracy, compassion, and durable long-term health outcomes. Whether dealing with stubborn hypertension, metabolic imbalances, or complex respiratory disorders, Dr. Aman Kumar provides a calm, methodical approach.
+                Trusted medical care focused on clinical accuracy, compassion, and durable long-term health outcomes. Whether dealing with stubborn joint pain, chronic acidity, metabolic disorders, or stress-related imbalances, Dr. Aman Kumar provides a calm, methodical approach.
               </p>
             </div>
 
@@ -65,25 +65,25 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
               <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/60 border border-slate-200/70">
                 <CheckCircle2 className="w-5 h-5 text-[#3D5B67] shrink-0" />
                 <span className="text-xs font-semibold text-slate-700">
-                  Evidence-Based Protocols
+                  Authentic Classical Ayurveda
                 </span>
               </div>
               <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/60 border border-slate-200/70">
                 <Award className="w-5 h-5 text-[#3D5B67] shrink-0" />
                 <span className="text-xs font-semibold text-slate-700">
-                  FCPS Certified Specialist
+                  Master in Ayurveda (Panchakarma)
                 </span>
               </div>
               <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/60 border border-slate-200/70">
                 <HeartHandshake className="w-5 h-5 text-[#3D5B67] shrink-0" />
                 <span className="text-xs font-semibold text-slate-700">
-                  Individualized Patient Plans
+                  Individualized Prakriti Plans
                 </span>
               </div>
               <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/60 border border-slate-200/70">
                 <FileText className="w-5 h-5 text-[#3D5B67] shrink-0" />
                 <span className="text-xs font-semibold text-slate-700">
-                  Comprehensive Lab Analysis
+                  Nadi Pariksha & Pulse Reading
                 </span>
               </div>
             </div>
@@ -127,25 +127,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
                 Clinical Profile & Qualifications
               </div>
               <h3 className="text-2xl font-bold text-slate-900">
-                Dr. Aman Kumar, MBBS, FCPS (Internal Medicine)
+                Dr. Aman Kumar, Master in Ayurveda (Panchakarma)
               </h3>
 
               <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                 <p>
-                  Dr. Aman Kumar completed his Bachelor of Medicine and Bachelor of Surgery (MBBS) with honors, followed by rigorous post-graduate fellowship training earning the Fellowship of College of Physicians and Surgeons (FCPS) in Internal Medicine.
+                  Dr. Aman Kumar completed his advanced degree as a Master in Ayurveda specializing in Panchakarma therapies, blending classical Ayurvedic diagnostic wisdom with modern holistic health principles.
                 </p>
                 <p>
-                  Over the past decade, he has served as attending physician across prestigious university medical centers and private referral clinics, diagnosing complex multisystem conditions where symptoms overlap.
+                  Over the past decade, he has treated thousands of patients through authentic Nadi Pariksha (Pulse Diagnosis), doctor-supervised Panchakarma therapies, and customized herbal formulations to address the root causes of disease rather than masking symptoms.
                 </p>
                 <h4 className="text-base font-bold text-slate-900 pt-2">
                   Areas of Clinical Focus:
                 </h4>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Resistant & secondary hypertension diagnostic workups</li>
-                  <li>Type 2 Diabetes remission and glycemic stabilization</li>
-                  <li>Adult asthma, chronic cough, and COPD respiratory therapies</li>
-                  <li>Dyslipidemia and atherosclerotic cardiovascular risk prevention</li>
-                  <li>Routine preventive wellness checkups and biomarker optimization</li>
+                  <li>Nadi Pariksha (Pulse Examination) & Tridosha constitutional mapping</li>
+                  <li>Doctor-supervised Panchakarma detox (Shirodhara, Basti, Janu Basti, Abhyanga)</li>
+                  <li>Chronic joint disorders, Osteoarthritis (Sandhivata) & Cervical Spondylosis</li>
+                  <li>Digestive fire restoration (Agni Chikitsa) for Amlapitta, IBS & Fatty Liver</li>
+                  <li>Metabolic balance, Type 2 Diabetes (Madhumeha) & weight management</li>
+                  <li>Classical Rasayana therapy for long-term rejuvenation, immunity & vitality</li>
                 </ul>
               </div>
 

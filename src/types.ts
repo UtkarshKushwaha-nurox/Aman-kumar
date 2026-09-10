@@ -19,6 +19,7 @@ export interface PricingPlan {
   id: string;
   name: string;
   price: number;
+  currencySymbol?: string;
   period: string;
   featured?: boolean;
   description: string;

@@ -76,7 +76,7 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-200/80 leading-relaxed max-w-sm">
-                  Internal Medicine specialist providing accurate clinical diagnostics, preventative cardiovascular care, and personalized chronic disease management.
+                  Master in Ayurveda & Panchakarma Specialist providing authentic Nadi Pariksha, Panchakarma rejuvenation, classical herbal medicine, and long-term holistic wellness.
                 </p>
 
                 {/* Social Icons */}
@@ -167,7 +167,7 @@ export const Footer: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Phone className="w-4 h-4 text-teal-200 shrink-0" />
-                    <a href={`tel:${DOCTOR_INFO.phone}`} className="hover:text-white">
+                    <a href={`tel:${DOCTOR_INFO.phone.replace(/\s+/g, '')}`} className="hover:text-white">
                       {DOCTOR_INFO.phone}
                     </a>
                   </div>

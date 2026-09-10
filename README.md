@@ -1,6 +1,6 @@
 # Dr. Aman Kumar - Medical Specialist & Clinic Portfolio
 
-A modern, responsive medical portfolio and appointment booking web application for Dr. Aman Kumar (MBBS, FCPS Internal Medicine).
+A modern, responsive medical portfolio and appointment booking web application for Dr. Aman Kumar (BAMS).
 
 ## Deploying with Render Blueprint
 

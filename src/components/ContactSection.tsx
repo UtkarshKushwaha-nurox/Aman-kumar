@@ -7,9 +7,11 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Calendar,
+  MessageCircle,
 } from 'lucide-react';
 import { DOCTOR_INFO, SERVICES, PRICING_PLANS } from '../data/mockData';
 import { AppointmentFormState } from '../types';
+import { sendConsultationToWhatsApp } from '../utils/whatsapp';
 
 interface ContactSectionProps {
   initialService?: string;
@@ -34,6 +36,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.phone) return;
+
+    sendConsultationToWhatsApp({
+      name: formData.fullName,
+      phone: formData.phone,
+      email: formData.email,
+      date: formData.preferredDate,
+      time: formData.preferredTime,
+      type: formData.serviceType,
+      message: formData.notes,
+    });
 
     // Generate reference code
     const refCode = `AMAN-${Math.floor(100000 + Math.random() * 900000)}`;
@@ -65,10 +77,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 In-Person & Virtual Appointments
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#19272E] tracking-tight">
-                Consult With Dr. Thomas
+                Consult With Dr. Aman Kumar
               </h2>
               <p className="text-sm text-slate-600 max-w-lg leading-relaxed">
-                Take the first step toward restoring your health balance. We welcome patients for chronic illness workups, annual health reviews, and specialized second opinions.
+                Take the first step toward restoring your biological balance. We welcome patients for Ayurvedic Nadi Pariksha, Panchakarma rejuvenation, and chronic disease consultations.
               </p>
             </div>
 
@@ -76,7 +88,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 aspect-16/9 relative group">
               <img
                 src={DOCTOR_INFO.contactImage}
-                alt="Dr. Thomas consulting with a patient in medical office"
+                alt="Dr. Aman Kumar consulting with a patient in Ayurvedic clinic"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent"></div>
@@ -84,7 +96,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <span className="text-xs font-semibold uppercase tracking-wider text-teal-200">
                   Private Consultation Suite
                 </span>
-                <p className="text-sm font-bold">St. Jude Specialist Health Center</p>
+                <p className="text-sm font-bold">Clinical Center, 28 Civil Lines, Roorkee</p>
               </div>
             </div>
 
@@ -121,7 +133,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div>
                   <h4 className="text-xs font-bold text-slate-800">Direct Telephone</h4>
                   <a
-                    href={`tel:${DOCTOR_INFO.phone}`}
+                    href={`tel:${DOCTOR_INFO.phone.replace(/\s+/g, '')}`}
                     className="text-xs font-medium text-slate-600 hover:text-[#3D5B67] mt-0.5 block"
                   >
                     {DOCTOR_INFO.phone}
@@ -249,7 +261,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       <input
                         type="tel"
                         required
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 98765 00000"
                         value={formData.phone}
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
@@ -276,15 +288,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           {s.title}
                         </option>
                       ))}
-                      {PRICING_PLANS.map((p) => (
-                        <option
-                          key={p.id}
-                          value={`${p.name} ($${p.price})`}
-                          className="bg-[#263a43]"
-                        >
-                          {p.name} (${p.price})
-                        </option>
-                      ))}
+                      {PRICING_PLANS.map((p) => {
+                        const sym = p.currencySymbol || '₹';
+                        return (
+                          <option
+                            key={p.id}
+                            value={`${p.name} (${sym}${p.price})`}
+                            className="bg-[#263a43]"
+                          >
+                            {p.name} ({sym}${p.price})
+                          </option>
+                        );
+                      })}
                     </select>
                   </div>
 
@@ -342,9 +357,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <button
                     type="submit"
                     id="contact-form-submit"
-                    className="w-full mt-2 py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-100 text-[#1E2E36] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-200 shadow-md active:scale-98"
+                    className="w-full mt-2 py-3.5 px-6 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-200 shadow-md active:scale-98"
                   >
-                    <span>Book Appointment</span>
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Send to WhatsApp & Book</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
                 </form>
